@@ -23,25 +23,26 @@
 
 {% endblock navbar %}
 {% block content %}
-
 <div class="col-12">
-    <div class="card  m-5 "style="height:92.9vh">
-      <div class="card-body" style="margin:auto">
+    <div class="card m-5" style="height: 100vh; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between;">
 
-        <video controls>
-            <source src="{{ projects.video.url }}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+            <video controls style="border-radius: 10px; max-width: 85%;">
+                <source src="{{ projects.video.url }}" type="video/mp4">
+            </video>
 
-        <h2 class="card-title">{{projects.title}}</h2>
-        <p class="font-weight-bold">Category:
-            <button class='btn-rounded btn btn-warning btn-sm m-2'>{{projects.category.name}}</button>
-            </p>
+            <div style="margin-top: 10px;">
+                <h2 class="card-title" style="margin-bottom: 10px;">{{projects.title}}</h2>
+                <p class="font-weight-bold" style="margin-bottom: 5px;">Category:
+                    <button class="btn btn-warning btn-sm">{{projects.category.name}}</button>
+                </p>
+                <a href="{{projects.live_link}}" class="btn btn-outline-primary">Live Link</a>
+            </div>
 
-        <a href="{{projects.live_link}}" class="btn-rounded btn btn-outline-primary">Live Link</a>
         </div>
     </div>
 </div>
+
 {% endblock content %}
 
 
