@@ -15,7 +15,7 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-CSRF_TRUSTED_ORIGINS = ["https://sheikh-sayeds-portfolio.onrender.com"]
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-^#e*z_b#d!fcd)$39s7$8d2(h75j(41-o37+fym!d#3%vfjy$n
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
+CSRF_TRUSTED_ORIGINS = ["https://sheikh-sayeds-portfolio.onrender.com"]
 
 # Application definition
 
